@@ -14,11 +14,21 @@ class TableViewController: UITableViewController{
     @IBOutlet var WeatherTable: UITableView!
     var urlString = "http://api.openweathermap.org/data/2.5/forecast?units=metric&q=Tokyo&APPID=05fb7646adcb7c0a20d0aad2d771103d"
     var cellNum = 10
+    //日付、
     var cellItems = NSMutableArray()
+    var cellDay = NSMutableArray()
+    var cellWM = NSMutableArray()
+    var cellWD = NSMutableArray()
+    
     var selectedInfo: String?
+    var selectedDay: String?
+    var selectedWM: String?
+    var selectedWD: String?
+    /*
     var weatherymd: String?
     var weatherMain: String?
     var weatherDescription: String?
+     */
      var logoImageView: UIImageView!
     
     
@@ -62,6 +72,9 @@ class TableViewController: UITableViewController{
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //_ = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         self.selectedInfo = self.cellItems[indexPath.row] as? String
+        self.selectedDay = self.cellDay[indexPath.row] as? String
+        self.selectedWM = self.cellWM[indexPath.row] as? String
+        self.selectedWD = self.cellWD[indexPath.row] as? String
         performSegue(withIdentifier: "toDetail", sender: nil)
     }
     
@@ -71,9 +84,9 @@ class TableViewController: UITableViewController{
             let viewController: ViewController = segue.destination as! ViewController
             //ViewControllerのLabelにjsonの値を代入
             viewController.info = self.selectedInfo
-            viewController.ymd = self.weatherymd
-            viewController.weMain = self.weatherMain
-            viewController.weDescription = self.weatherDescription
+            viewController.day = self.selectedDay
+            viewController.wm = self.selectedWM
+            viewController.wd = self.selectedWD
         }
         
     }
@@ -89,13 +102,18 @@ class TableViewController: UITableViewController{
                 let weatherMain = json["list"][i]["weather"][0]["main"]
                 let weatherDescription = json["list"][i]["weather"][0]["description"]
                 let info = "\(dt_txt), \(weatherMain), \(weatherDescription)"
-                self.weatherymd = "\(dt_txt)"
-                self.weatherMain = "\(weatherMain)"
-                self.weatherDescription = "\(weatherDescription)"
+                let day = "\(dt_txt)"
+                let wm = "\(weatherMain)"
+                let wd = "\(weatherDescription)"
+                
                 print(info)
                 self.cellItems[i] = info
+                self.cellDay[i] = day
+                self.cellWM[i] = wm
+                self.cellWD[i] = wd
                 
             }
+            
             
             DispatchQueue.main.async{
                 self.tableView.reloadData()
