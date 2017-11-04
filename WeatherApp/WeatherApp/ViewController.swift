@@ -11,9 +11,9 @@ import UIKit
 class ViewController: UIViewController {
     
     var info: String?
-    var ymd: String?
-    var weMain: String?
-    var weDescription: String?
+    var day: String?
+    var wm: String?
+    var wd: String?
     @IBOutlet weak var ymdLabel: UILabel!
     @IBOutlet weak var weMainLabel: UILabel!
     @IBOutlet weak var weDescriptionLabel: UILabel!
@@ -23,9 +23,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.infoLabel?.text = self.info
-        self.ymdLabel?.text = self.ymd
-        self.weMainLabel?.text = self.weMain
-        self.weDescriptionLabel?.text = self.weDescription
+        self.ymdLabel?.text = self.day
+        self.weMainLabel?.text = self.wm
+        self.weDescriptionLabel?.text = self.wd
 
     }
     
