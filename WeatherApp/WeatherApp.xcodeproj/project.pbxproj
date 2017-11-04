@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		2781EA0F1F9EDD0500823AFE /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2781EA0E1F9EDD0500823AFE /* LaunchViewController.swift */; };
-		27E933551FA701B500BBF6A5 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E933541FA701B500BBF6A5 /* TableViewCell.swift */; };
 		27F9FE621F3E8CDF00199197 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F9FE611F3E8CDF00199197 /* AppDelegate.swift */; };
 		27F9FE641F3E8CDF00199197 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F9FE631F3E8CDF00199197 /* ViewController.swift */; };
 		27F9FE671F3E8CDF00199197 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27F9FE651F3E8CDF00199197 /* Main.storyboard */; };
@@ -20,7 +19,6 @@
 
 /* Begin PBXFileReference section */
 		2781EA0E1F9EDD0500823AFE /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
-		27E933541FA701B500BBF6A5 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		27F9FE5E1F3E8CDF00199197 /* WeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27F9FE611F3E8CDF00199197 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27F9FE631F3E8CDF00199197 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -65,7 +63,6 @@
 				27F9FE611F3E8CDF00199197 /* AppDelegate.swift */,
 				27F9FE631F3E8CDF00199197 /* ViewController.swift */,
 				27F9FE771F3EB61100199197 /* TableViewController.swift */,
-				27E933541FA701B500BBF6A5 /* TableViewCell.swift */,
 				27F9FE751F3E9E6700199197 /* SwiftyJSON.swift */,
 				27F9FE651F3E8CDF00199197 /* Main.storyboard */,
 				27F9FE681F3E8CDF00199197 /* Assets.xcassets */,
@@ -152,7 +149,6 @@
 				27F9FE641F3E8CDF00199197 /* ViewController.swift in Sources */,
 				2781EA0F1F9EDD0500823AFE /* LaunchViewController.swift in Sources */,
 				27F9FE621F3E8CDF00199197 /* AppDelegate.swift in Sources */,
-				27E933551FA701B500BBF6A5 /* TableViewCell.swift in Sources */,
 				27F9FE761F3E9E6700199197 /* SwiftyJSON.swift in Sources */,
 				27F9FE781F3EB61100199197 /* TableViewController.swift in Sources */,
 			);
